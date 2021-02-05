@@ -24,6 +24,6 @@ esbuild.buildSync({
   external: ["react", "react-dom"],
   minify: true,
   define: {
-    "process.env.NODE_ENV": '"production"',,
+    "process.env.NODE_ENV": '"production"',
   },
 });
