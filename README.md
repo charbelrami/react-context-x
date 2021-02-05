@@ -1,6 +1,8 @@
 # react-context-x
 
-[How to optimize shared states in React](#)
+> Optimize shared states in React (353 B)
+>
+> [How to optimize shared states in React](https://dev.to/charbelrami/how-to-optimize-shared-states-in-react-k66)
 
 | Table of Contents             |
 | :---------------------------- |
@@ -11,17 +13,9 @@
 
 ## Examples
 
-- [Basic](https://codesandbox.io/s/context-x-example-bp0n1)
+- [Basic](https://codesandbox.io/s/context-x-o0dcc)
 
 ## Installation
-
-with Yarn:
-
-```bash
-yarn add react-context-x
-```
-
-with npm:
 
 ```bash
 npm install react-context-x
@@ -33,7 +27,7 @@ npm install react-context-x
 import { createContexts } from "react-context-x";
 
 const states = {
-  count: 0
+  count: 0,
 };
 
 export const contexts = createContexts(states);
@@ -76,7 +70,9 @@ import { contexts } from "./contexts";
 export function Increment() {
   const setCount = useSetStateContext(contexts, "count");
 
-  return <button onClick={() => setCount(prev => prev + 1)}>Increment</button>;
+  return (
+    <button onClick={() => setCount((prev) => prev + 1)}>Increment</button>
+  );
 }
 ```
 

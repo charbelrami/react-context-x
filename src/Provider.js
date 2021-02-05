@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 export function Provider({ children, value }) {
   const stateContext = value.state;
   const setStateContext = value.setState;
 
-  const [state, setState] = useState(stateContext._currentValue);
+  const [state, setState] = React.useState(stateContext._currentValue);
 
   return (
     <stateContext.Provider value={state}>

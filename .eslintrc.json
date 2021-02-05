@@ -1,24 +1,24 @@
 {
-  "env": {
-    "browser": true,
-    "node": true
-  },
-
   "parserOptions": {
-    "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "settings": {
-    "react": {
-      "version": "16.13.0"
-    }
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
-  ]
+    "plugin:react-hooks/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "rules": {
+    "react/prop-types": 0
+  }
 }
