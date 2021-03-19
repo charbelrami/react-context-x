@@ -1,6 +1,6 @@
 # react-context-x
 
-> Optimize shared states in React (353 B)
+> Optimize shared states in React (353B)
 >
 > [How to optimize shared states in React](https://dev.to/charbelrami/how-to-optimize-shared-states-in-react-k66)
 

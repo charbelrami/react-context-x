@@ -1,7 +1,6 @@
-.DS_STORE
+.DS_Store
+/.vscode/
+/coverage/
 node_modules
-package-lock.json
-yarn.lock
 *.log*
-.vscode
-dist
+dist/

@@ -1,35 +1,30 @@
 {
   "name": "react-context-x",
-  "description": "Optimize shared states in React (353 B)",
+  "description": "Optimize shared states in React (353B)",
   "version": "0.3.1",
-  "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.mjs"
   },
-  "engines": {
-    "node": ">=15",
-    "npm": ">=7"
-  },
+  "license": "MIT",
   "scripts": {
-    "prod": "node scripts/node-prod && gzip -c dist/index.mjs | wc -c",
-    "dev": "node scripts/node-dev",
-    "watch": "watchman-make -p 'src/**/*' --run \"npm run dev\"",
+    "prod": "node scripts/cjs.mjs && node scripts/esm.mjs && gzip -c dist/index.mjs | wc -c",
     "prepare": "npm run prod"
   },
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "*",
+    "react-dom": "*"
   },
   "devDependencies": {
-    "esbuild": "^0.8.41",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
+    "esbuild": "^0.9.5",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1"
