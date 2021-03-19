@@ -1,7 +1,7 @@
 {
   "name": "react-context-x",
   "description": "Optimize shared states in React (353B)",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "files": [
